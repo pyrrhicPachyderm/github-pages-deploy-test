@@ -10,9 +10,10 @@ jobs:
         uses: actions/checkout@master
         
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@releases/v3-beta
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v1
         with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BASE_BRANCH: master
-          BRANCH: gh-pages
-          FOLDER: website
+          target_branch: gh-pages
+          build_dir: website
+        env:
+          GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
