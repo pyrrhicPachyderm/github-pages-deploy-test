@@ -10,4 +10,4 @@ jobs:
         uses: maxheld83/ghpages@master
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
-          BUILD_DIR: website/
+          BUILD_DIR: ../../website/
