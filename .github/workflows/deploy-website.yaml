@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@master
         
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@releases/v2
+        uses: JamesIves/github-pages-deploy-action@releases/v3-beta
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BASE_BRANCH: master
