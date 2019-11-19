@@ -19,11 +19,11 @@ jobs:
         with:
           name: website-directory
           path: website/
-   
-   deploy:
-     name: Deploy
-     needs: build
-     runs-on: ubuntu-latest
+  
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
       - name: Dowload Artifact
         uses: actions/download-artifact@master
         with:
