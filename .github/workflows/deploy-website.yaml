@@ -24,6 +24,7 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
+    steps:
       - name: Dowload Artifact
         uses: actions/download-artifact@master
         with:
