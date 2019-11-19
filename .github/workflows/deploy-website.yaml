@@ -1,0 +1,13 @@
+name: Deploy Website
+on: [push]
+
+jobs:
+  deploy:
+    name: Deploy Website
+    runs-on: ubuntu-latest
+    steps:
+      - name: GitHub Pages Deploy
+        uses: maxheld83/ghpages@master
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+          BUILD_DIR: .
