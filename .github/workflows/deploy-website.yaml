@@ -6,6 +6,9 @@ jobs:
     name: Deploy Website
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@master
+        
       - name: GitHub Pages Deploy
         uses: maxheld83/ghpages@master
         env:
