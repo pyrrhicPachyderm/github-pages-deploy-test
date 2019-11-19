@@ -9,6 +9,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
         
+      - name: Build
+        run: |
+          make website
+        
       - name: Deploy to GitHub Pages
         if: success()
         uses: crazy-max/ghaction-github-pages@v1
