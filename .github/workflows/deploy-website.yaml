@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
   deploy:
-    container: xucheng/texlive-full
+    container: thomasweise/texlive
     name: Deploy Website
     runs-on: ubuntu-latest
     steps:
