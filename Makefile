@@ -23,4 +23,4 @@ clean:
 website/test.pdf: test.pdf
 	@cp $< $@
 
-.PHONY: all website
+.PHONY: all website clean
