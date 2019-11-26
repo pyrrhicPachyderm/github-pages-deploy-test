@@ -9,7 +9,6 @@ website: website/test.pdf
 test.pdf: test.tex
 	latexmk $(LATEXMK_FLAGS) --jobname="$(basename $@)" $<
 clean:
-	clean:
 	@(\
 		shopt -s globstar;\
 		$(RM) **/*.aux **/*.log **/*.out **/*.toc **/*.fls;\
