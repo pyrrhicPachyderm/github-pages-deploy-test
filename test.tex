@@ -1,5 +1,17 @@
 \documentclass{article}
 
+\usepackage{xpatch}
+
+%This is to fix the following error:
+%pdfTeX error (ext4): \pdfendlink ended up in different nesting level than \pdfstartlink.
+%From the end of this answer: https://tex.stackexchange.com/a/249743
+%Using xpatch instead of etoolbox.
+\makeatletter
+\xpatchcmd\@combinedblfloats{\box\@outputbox}{\unvbox\@outputbox}{}{%
+	\errmessage{\noexpand\@combinedblfloats could not be patched}%
+}%
+\makeatother
+
 \begin{document}
 This is a LaTeX document.
 \end{document}
